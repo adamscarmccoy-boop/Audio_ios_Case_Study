@@ -48,16 +48,3 @@ The engine generates performance telemetry logs in the `logs/` directory, captur
 
 ---
 
-## Proposal Response Assets
-
-### Cover Letter Snippet
-"I am not applying for a junior role; I am delivering a finished engine architecture. I have taken the 'hard path'—building an on-device, deterministic DSP pipeline that delivers a sub-2ms extraction latency. This is 10x faster than your 20ms requirement, providing a massive performance buffer for your iOS implementation."
-
-### Screening Question Answers
-1. **Experience:** Built multiple real-time recognition systems, including the "Acoustic DNA" engine which uses circular buffer management and chroma-feature extraction to identify chords with sub-2ms latency.
-2. **Mobile/Edge:** Frequently work with Core ML and TFLite quantization. My current architecture targets < 5ms inference time on-device by reducing raw audio data size by 98% pre-inference.
-3. **Approach:** I use a zero-copy circular buffer to feed a STFT/CQT feature extractor, creating a 12-dimensional chroma signature. This 'mathematical truth' is then classified locally on-device, bypassing network jitter entirely.
-
----
-**Author:** Adam McCoy
-**Project:** Acoustic DNA Audio Engine PoC
