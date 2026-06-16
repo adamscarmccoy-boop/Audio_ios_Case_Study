@@ -59,5 +59,5 @@ The engine generates performance telemetry logs in the `logs/` directory, captur
 3. **Approach:** I use a zero-copy circular buffer to feed a STFT/CQT feature extractor, creating a 12-dimensional chroma signature. This 'mathematical truth' is then classified locally on-device, bypassing network jitter entirely.
 
 ---
-**Author:** [Your Name/Gemini CLI]
+**Author:** Adam McCoy
 **Project:** Acoustic DNA Audio Engine PoC
