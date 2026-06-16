@@ -1,5 +1,7 @@
 # 🎸 Acoustic DNA Audio Engine (Finished Architecture)
 
+![Acoustic DNA Engine CI](https://github.com/adamscarmccoy-boop/Audio_ios_Case_Study/actions/workflows/python-tests.yml/badge.svg)
+
 ## Executive Summary
 This repository delivers a high-performance, real-time audio recognition architecture. Unlike standard prototypes, this is a **production-ready engine** designed to bypass cloud-based inference in favor of on-device Signal Processing and Edge AI. 
 
