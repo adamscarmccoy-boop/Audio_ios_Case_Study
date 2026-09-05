@@ -1,3 +1,11 @@
+---
+title: Real-Time iOS Audio Engine & Low-Latency CoreAudio Architecture
+description: Low-latency production-grade iOS audio architecture and AVFoundation pipeline tuning.
+keywords: [CoreAudio, AVFoundation, iOS Architecture, Audio Processing, Swift, Low Latency, Real-Time Audio, iOS Consulting]
+author: Adam Scar McCoy
+category: Software Architecture
+---
+
 # Real-Time iOS Audio Engine & Low-Latency CoreAudio Case Study
 
 > **Deterministic, lock-free real-time audio pipeline engineered on Apple Silicon & iOS.**
