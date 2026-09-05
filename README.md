@@ -24,6 +24,33 @@ To achieve a seamless feel, we have engineered a pipeline with a **sub-2ms loop 
 
 ---
 
+## 🚀 Quickstart: How It Runs
+
+### 1. Ingestion & Feature Extraction
+```python
+import numpy as np
+from engine.analysis import AcousticDNAEngine
+
+# Initialize high-performance engine (44.1kHz / 1024-sample slice)
+engine = AcousticDNAEngine(sample_rate=44100, buffer_size=1024)
+
+# Stream 1024-sample audio buffer (e.g. from CoreAudio HAL callback)
+audio_buffer = np.random.uniform(-0.1, 0.1, 1024).astype(np.float32)
+
+# Extract 12-dimensional Acoustic DNA vector (C through B)
+dna_vector = engine.process_buffer(audio_buffer)
+print(f"Extracted Acoustic DNA (12-dim Chroma): {dna_vector}")
+```
+
+### 2. Interactive Notebook Analysis
+```bash
+# Launch interactive pipeline notebooks
+jupyter notebook notebooks/pipeline_analysis.ipynb
+jupyter notebook notebooks/real_world_analysis.ipynb
+```
+
+---
+
 ## 1. The Strategy: The "10x Margin"
 In high-stakes mobile development, 20ms is the target, but 2ms is the safety net. By delivering a 10x performance surplus in the DSP layer, we ensure the UI remains fluid even during high-intensity CPU spikes from other app processes.
 
@@ -72,8 +99,13 @@ While `AVAudioEngine` provides a convenient high-level node system, it introduce
 
 ---
 
-## 3. Real-World Decision Support
-This engine doesn't just "detect"; it audits:
+## 3. Real-World Decision Support & Visual Proof
+This engine doesn't just "detect"; it audits with empirical visual evidence:
+
+| Radar Acoustic Signature | Flow Latency Distribution |
+| :---: | :---: |
+| ![Radar Signature](assets/acoustic_dna_radar_signature.png) | ![Latency Distribution](assets/latency_performance_distribution.png) |
+
 * **Sonic DNA Radar Charts:** Visual proof of detection accuracy against industry baselines.
 * **Crest Factor & RMS Analysis:** Understanding the "physics" of the audio signal to ignore background noise and harmonic aliasing.
 
@@ -99,7 +131,7 @@ From the root of the repository:
 ```bash
 # Set PYTHONPATH to the current directory
 export PYTHONPATH=$PYTHONPATH:.
-pytest tests/test_engine.py
+pytest tests/test_engine.py -v
 ```
 
 ### Telemetry Logs
